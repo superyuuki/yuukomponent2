@@ -2,12 +2,11 @@ package com.superyuuki.yuukomponent.core.feature.inbuilt.interact;
 
 import com.superyuuki.yuukomponent.core.Event;
 
-public class Interact {
+public class InteractEvent implements Event{
 
-    static {
-
+    public int data() {
+        return 2;
     }
 
-    public record Event(int data) implements com.superyuuki.yuukomponent.core.Event {}
 
 }

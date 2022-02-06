@@ -19,7 +19,7 @@ public interface InteractTrait extends Trait {
 
         @Override
         public void accept(Event event, Blackhole blackhole) {
-            if (event instanceof Interact.Event event1) {
+            if (event instanceof InteractEvent.Event event1) {
                 boolean shouldFW = interactTrait.onClick(event1.data());
 
                 if (shouldFW) {
