@@ -1,21 +1,11 @@
 package com.superyuuki.yuukomponent.core.feature.inbuilt.interact;
 
-import com.superyuuki.yuukomponent.core.feature.Feature;
 import com.superyuuki.yuukomponent.core.feature.function.Behavior;
-import com.superyuuki.yuukomponent.core.feature.utility.Cancellable;
-
-import static com.superyuuki.yuukomponent.core.feature.utility.Cancellable.COMPLETE;
+import com.superyuuki.yuukomponent.core.feature.trait.Translate;
+import com.superyuuki.yuukomponent.core.feature.trait.Translator;
 
 public interface InteractBehavior extends Behavior {
 
-    record ToTrait(Feature self) implements InteractTrait {
+    void onClick(int data);
 
-        @Override
-        public Cancellable<Void> onClick(int data) {
-            self.handle(new InteractEvent(data));
-
-            return COMPLETE;
-        }
-
-    }
 }

@@ -4,31 +4,33 @@ import com.superyuuki.yuukomponent.core.Event;
 import com.superyuuki.yuukomponent.core.feature.trait.Trait;
 import com.superyuuki.yuukomponent.core.feature.trait.Blackhole;
 import com.superyuuki.yuukomponent.core.feature.trait.Translatable;
-import com.superyuuki.yuukomponent.core.YuuKomponent;
-import com.superyuuki.yuukomponent.core.feature.utility.Cancellable;
 
 public interface InteractTrait extends Trait {
 
-    /**
-     * method called when an item is right-clicked
-     * @param data DATA
-     */
-    Cancellable<Void> onClick(int data);
+    boolean onClick(int data);
 
-    record ToTranslatable(InteractTrait aspect) implements Translatable {
+    class Translate implements Translatable {
+
+        private final InteractTrait interactTrait;
+
+        public Translate(InteractTrait interactTrait) {
+            this.interactTrait = interactTrait;
+        }
 
         @Override
         public void accept(Event event, Blackhole blackhole) {
-            if (event instanceof InteractEvent interactEvent) {
-                var result = aspect.onClick(interactEvent.data());
+            if (event instanceof Interact.Event event1) {
+                boolean shouldFW = interactTrait.onClick(event1.data());
 
-                if (!result.isCancelled()) {
-                    blackhole.forward(interactEvent);
+                if (shouldFW) {
+                    blackhole.forward(event);
                 }
+
+                return;
             }
+
+            blackhole.forward(event);
         }
     }
-
-
 
 }
