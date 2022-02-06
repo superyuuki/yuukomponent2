@@ -1,0 +1,4 @@
+/.idea/
+.iml
+# Project exclude paths
+/yuukomponent2-core/target/
