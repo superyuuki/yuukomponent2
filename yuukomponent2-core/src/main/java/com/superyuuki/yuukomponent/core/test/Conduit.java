@@ -5,6 +5,6 @@ import com.superyuuki.yuukomponent.core.feature.Feature;
 
 public interface Conduit {
 
-    void fire(Feature self, Event event);
+    void fire(Conduit self, Event event);
 
 }
