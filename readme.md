@@ -1,6 +1,10 @@
+# YuuKomponent2
+> The last custom item plugin you'll ever need
+
+# Testing
+The rules of testing for yuukomponent are: If it breaks, write a test.
 
 # Terms
-
 - Component
   - Chain of features that handles events, represents
     the smallest *functional* piece of data. A molecule.

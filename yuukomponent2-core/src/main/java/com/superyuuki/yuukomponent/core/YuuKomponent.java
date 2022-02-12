@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core;
 
-import com.superyuuki.yuukomponent.core.feature.registrar.TraitRegistrar;
+import com.superyuuki.yuukomponent.core.aspect.registrar.TraitRegistrar;
 
 import java.util.*;
 
