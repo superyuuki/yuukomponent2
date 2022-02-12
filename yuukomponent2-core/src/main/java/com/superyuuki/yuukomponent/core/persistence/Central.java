@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.persistence;
 
-import com.superyuuki.yuukomponent.core.aspect.compile.Trait;
+import com.superyuuki.yuukomponent.api.aspect.compile.Trait;
 
 import java.util.Optional;
 import java.util.UUID;
