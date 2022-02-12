@@ -11,6 +11,7 @@
 
     <modules>
         <module>yuukomponent2-core</module>
+        <module>yuukomponent2-api</module>
     </modules>
 
     <properties>

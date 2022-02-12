@@ -43,6 +43,7 @@
     </build>
 
     <dependencies>
+        <!-- yuukomponent !-->
 
         <!-- minecraft !-->
         <dependency>
