@@ -1,11 +1,9 @@
 package com.superyuuki.yuukomponent.core.persistence;
 
-/**
- * Represents a component
- */
 public interface Persistent {
 
-    String asTrait();
+    String type();
+    Storage data();
 
     void save();
 
