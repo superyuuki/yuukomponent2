@@ -25,6 +25,7 @@ public class YuuKomponent {
         } while (it.hasNext());
 
         providers.sort(((Comparator<YuuKomponentProvider>) (o1, o2) -> o1.priority() - o2.priority()).reversed()); // reverse to use descending order
+
         return providers.get(0).createDefiner();
     }
 

@@ -1,12 +1,16 @@
 package com.superyuuki.yuukomponent.core.persistence;
 
-/**
- * Represents a component
- */
-public interface Persistent {
+public interface Persistent<T> {
 
-    String asTrait();
+    /**
+     * Method called on cached value update
+     * @param query persistent type
+     */
+    void update(T query);
 
+    /**
+     * Method called on cache invalidation
+     */
     void save();
 
 }
